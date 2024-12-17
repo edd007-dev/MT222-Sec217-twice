@@ -1,0 +1,89 @@
+body{
+    background-color: #1acbfc;
+}
+.traffic-light{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
+    height: 22.5em;
+    width: 10em;
+    background-color: #333;
+    border: 0.5em solid #eee;
+    transform: translate(-50%, -50%);
+    border-radius: 2em;
+}
+
+.traffic-light::before{
+    content: "";
+    width: 3em;
+    height: 8em;
+    background-color: #eee;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.light{
+    width: 6em;
+    height: 5.5em;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 1em auto;
+    border-top: #000 solid 0.5em;
+}
+
+.red{
+    animation: red 10s linear infinite;
+}
+
+@keyframes red{
+    0% { 
+        background: black; 
+    } 
+    2%, 40% { 
+        background-color: red; 
+    } 
+    42%, 100% { 
+        background: black; 
+    }
+        
+}
+
+.amber{
+    animation: amber 10s linear infinite;
+}
+
+@keyframes amber { 
+    0%, 20% { 
+        background: black; 
+    }
+    22%, 40% { 
+        background: #FF7E00; 
+    } 
+    42%, 80% { 
+        background: black; 
+    } 
+    82%, 100% { 
+        background: #FF7E00; 
+    } 
+}
+    
+
+.green{
+    animation: green 10s linear infinite;
+}
+
+@keyframes green { 
+    0%, 40% { 
+        background: black; 
+    } 
+    42%, 80% { 
+        background: green;
+    } 
+    82%, 100% { 
+        background: black; 
+    } 
+}
+    
